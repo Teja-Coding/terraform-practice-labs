@@ -1,4 +1,4 @@
-resource "aws_instance" "my_instance" {
+resource "aws_instance" "this" {
   count = length(var.my_instances_name)
   ami           = var.ami_id     #"ami-09c813fb71547fc4f"
   instance_type = var.environment == "dev"? "t3.medium":"t3.micro"    #"t3.micro"
