@@ -49,7 +49,7 @@ resource "aws_instance" "redis" {
   tags = merge(
     local.common_tags,
     {
-      Name = "${local.common_name_suffix}-mongodb"
+      Name = "${local.common_name_suffix}-redis"
     }
   )
 }
