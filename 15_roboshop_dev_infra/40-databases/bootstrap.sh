@@ -15,8 +15,10 @@ touch ansible.log
 
 cd $REPO_DIR
 
-#check if ansible repo is already cloned or not
-if[ -d $ANSIBLE_DIR ]; then
+# check if ansible repo is already cloned or not
+
+if [ -d $ANSIBLE_DIR ]; then
+
     cd $ANSIBLE_DIR
     git pull
 else
@@ -24,5 +26,5 @@ else
     cd $ANSIBLE_DIR
 fi
 
-ansible-playbook -e component=$component main.yaml
+ansible-playbook -e component=$component -e env=$environment main.yaml
 
