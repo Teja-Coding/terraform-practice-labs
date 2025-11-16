@@ -8,7 +8,7 @@ REPO_URL=https://github.com/Teja-Coding/ansible-roboshop-roles-tf.git
 REPO_DIR=/opt/roboshop/ansible
 ANSIBLE_DIR=ansible-roboshop-roles-tf
 component=$1
-environment=$2 
+env=$2 
 
 
 mkdir -p $REPO_DIR
@@ -28,5 +28,5 @@ else
     cd $ANSIBLE_DIR
 fi
 
-ansible-playbook -e component=$component -e env=$environment main.yaml
+ansible-playbook -e component=$component -e env=$env main.yaml
 
