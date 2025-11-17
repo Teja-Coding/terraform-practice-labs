@@ -170,7 +170,7 @@ resource "terraform_data" "mysql" {
 }
 #----------------------------------------------
 
-resource "aws_route53_record" "mongodb  " {
+resource "aws_route53_record" "mongodb" {
   zone_id = var.zone_id
   name    = "mongodb-${var.environment}.${var.domain_name}" # mongodb-dev.fineshit.shop
   type    = "A"
