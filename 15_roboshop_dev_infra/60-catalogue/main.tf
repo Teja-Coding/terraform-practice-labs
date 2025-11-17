@@ -53,7 +53,7 @@ resource "aws_ami_from_instance" "catalogue" {
     tags = merge(
     local.common_tags,
     {
-      Name = "${var.project_name}-${var.environment}-catalogue-ami" #roboshop-dev-catalogue-ami
+      Name = "${var.project_name}-${var.environment}-catalogue-ami" #roboshop-dev-catalogue-ami 
     }
   )
 }
