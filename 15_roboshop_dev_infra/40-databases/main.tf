@@ -186,7 +186,7 @@ resource "aws_route53_record" "redis" {
   records = [aws_instance.redis.private_ip]
 }
 
-resource "aws_route53_record" "rabbitmq  " {
+resource "aws_route53_record" "rabbitmq" {
   zone_id = var.zone_id
   name    = "rabbitmq-${var.environment}.${var.domain_name}" # rabbitmq-dev.fineshit.shop
   type    = "A"
