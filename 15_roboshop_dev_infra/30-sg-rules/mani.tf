@@ -74,3 +74,12 @@ resource "aws_security_group_rule" "catalogue_bastion" {
   security_group_id = local.catalogue_sg_id
   source_security_group_id = local.bastion_sg_id
 }
+
+resource "aws_security_group_rule" "mongodb_catalogue" {
+  type              = "ingress"
+  from_port         = 27017
+  to_port           = 27017
+  protocol          = "tcp"
+  security_group_id = local.mongodb_sg_id
+  source_security_group_id = local.catalogue_sg_id
+}
